@@ -64,7 +64,7 @@ public class Stack<T extends Comparable>{
         return node != getList().getTAIL();
     }
 
-    public void nullify(){
+    public void clear(){
         list.removeDoublyLinkedList();
     }
 

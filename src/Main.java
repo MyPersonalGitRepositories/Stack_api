@@ -18,7 +18,7 @@ public class Main {
             e.printStackTrace();
         }
         System.out.println(" ");
-        stack.nullify();
+        stack.clear();
         try {
             System.out.println(stack.peek());
         } catch (EmptyStackException e) {
@@ -39,7 +39,7 @@ public class Main {
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
-        stack.nullify();
+        stack.clear();
         System.out.println(" ");
         try {
             System.out.println(stack.pop());
@@ -55,7 +55,7 @@ public class Main {
         System.out.println("Stack is not empty");
         System.out.println(stack.empty());
         System.out.println(" ");
-        stack.nullify();
+        stack.clear();
         System.out.println("Stack is empty");
         System.out.println(stack.empty());
         System.out.println("Adding elements:");
