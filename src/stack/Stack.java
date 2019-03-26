@@ -1,14 +1,14 @@
 package stack;
 import exceptions.*;
-import lists.MyLinkedList;
+import lists.MyList;
 
 
 
 public class Stack<T extends Comparable>{
-    private MyLinkedList<T> list;
+    private MyList<T> list;
 
     public <E extends T>Stack(){
-        list = (MyLinkedList<T>) new MyLinkedList<E>();
+        list = (MyList<T>) new MyList<E>();
     }
 
     public T push(T item){
@@ -45,7 +45,7 @@ public class Stack<T extends Comparable>{
             throw new EmptyStackException(Stack.class.getMethod("search", Comparable.class));
         }
         int counter = list.size();
-        MyLinkedList.Node TEMP = getList().getHEAD();
+        MyList.Node TEMP = getList().getHEAD();
         while (TEMP == getList().getTAIL() || hasNext(TEMP)){
             if(TEMP.getValue().equals(o)){
                 return counter;
@@ -60,7 +60,7 @@ public class Stack<T extends Comparable>{
         return -1;
     }
 
-    private boolean hasNext(MyLinkedList.Node node){
+    private boolean hasNext(MyList.Node node){
         return node != getList().getTAIL();
     }
 
@@ -68,7 +68,7 @@ public class Stack<T extends Comparable>{
         list.removeDoublyLinkedList();
     }
 
-    public MyLinkedList<T> getList() {
+    public MyList<T> getList() {
         return list;
     }
 }

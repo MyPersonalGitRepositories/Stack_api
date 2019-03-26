@@ -2,18 +2,18 @@ package lists;
 
 import com.sun.javafx.binding.StringFormatter;
 
-public class MyLinkedList<T extends Comparable> {
+public class MyList<T extends Comparable> {
     private Node HEAD;
     private Node TAIL;
     private int counter = 0;
 
-    public MyLinkedList(){
+    public MyList(){
         HEAD = new Node(null);
         TAIL = HEAD;
         counter++;
     }
 
-    public MyLinkedList(T value){
+    public MyList(T value){
         HEAD = new Node(value);
         TAIL = HEAD;
         counter++;
